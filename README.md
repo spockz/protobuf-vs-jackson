@@ -36,7 +36,7 @@ Example Run
     iters = 20,000
 
     times in milliseconds
-    sizes in bytes (protobuf) and characters (jackson)
+    sizes in bytes (protobuf) and characters (jackson, afterburner, protobuf-json)
 
                              test      min      max      avg
 ------------------------------------------------------------
