@@ -25,7 +25,7 @@ Example Run
 -----
 
     JDK 8
-    Macbook Pro (early-2012)
+    Macbook Pro (early-2011)
     2.2 GHz Intel Core i7
     8 GB 1600 MHz DDR3
     
