@@ -4,6 +4,7 @@ import java.text.DecimalFormat;
 
 import com.glonk.benchmark.jackson.JacksonBenchmarks;
 import com.glonk.benchmark.protobuf.ProtobufBenchmarks;
+import com.glonk.benchmark.protobuf.ProtobufJsonBenchmarks;
 
 
 public class BenchmarkApp {
@@ -24,7 +25,8 @@ public class BenchmarkApp {
       BenchmarkSet[] sets = new BenchmarkSet[] {
           new JacksonBenchmarks(false, numChildren),
           new JacksonBenchmarks(true, numChildren),
-          new ProtobufBenchmarks(numChildren)
+          new ProtobufBenchmarks(numChildren),
+          new ProtobufJsonBenchmarks(numChildren)
       };
 
       for (BenchmarkSet set : sets) {

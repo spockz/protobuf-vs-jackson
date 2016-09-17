@@ -45,6 +45,8 @@ dependencies {
   compile "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
   compile "com.fasterxml.jackson.module:jackson-module-afterburner:${jacksonVersion}"
   compile "com.google.protobuf:protobuf-java:${protobufVersion}"
+  compile 'com.google.protobuf:protobuf-java-util:3.0.2'
+  compile 'commons-io:commons-io:2.5'
 }
 
 task wrapper(type: Wrapper) {
