@@ -25,73 +25,88 @@ Example Run
 -----
 
     JDK 8
-    Macbook Pro Retina (mid-2012)
-    2.7 GHz Intel Core i7
-    16 GB 1600 MHz DDR3
+    Macbook Pro (early-2012)
+    2.2 GHz Intel Core i7
+    8 GB 1600 MHz DDR3
+    
+    jacksonVersion = '2.5.1'
+    protobufVersion = '3.0.2'
 
     loops = 10
-    iters = 10,000
+    iters = 20,000
 
     times in milliseconds
     sizes in bytes (protobuf) and characters (jackson)
 
-                              test      min      max      avg
-    -----------------------------------------------------------------
+                             test      min      max      avg
+------------------------------------------------------------
 
     with 0 children
-             jackson serialization      7.3     71.3     19.1
-           jackson deserialization     13.6     95.6     27.2
-         afterburner serialization      8.0     36.6     14.5
-       afterburner deserialization     13.5     15.6     13.9
-            protobuf serialization      1.2     12.4      3.1
-          protobuf deserialization      1.7     12.5      4.0
-
+             jackson serialization      9.4    114.1     27.6
+           jackson deserialization     16.6    133.6     34.6
+         afterburner serialization      9.7     55.0     18.9
+       afterburner deserialization     15.7     23.8     18.7
+            protobuf serialization      1.2     15.9      3.8
+          protobuf deserialization      2.7     23.4      6.2
+       protobuf-json serialization     38.4    228.7     70.7
+     protobuf-json deserialization     47.8    224.8     78.2
+    
     encoded sizes:
                            jackson   104
                        afterburner   104
                           protobuf   26
-
-
+                     protobuf-json   95
+    
+    
     with 8 children
-             jackson serialization     53.3     78.7     62.5
-           jackson deserialization    110.1    130.9    114.9
-         afterburner serialization     53.5     57.5     54.7
-       afterburner deserialization    109.8    115.4    112.7
-            protobuf serialization     10.2     82.1     19.0
-          protobuf deserialization     19.3     35.2     25.1
-
+             jackson serialization     64.5     87.3     71.2
+           jackson deserialization    133.9    171.2    144.5
+         afterburner serialization     63.0     77.7     68.4
+       afterburner deserialization    134.1    157.4    145.6
+            protobuf serialization     10.0     91.6     19.6
+          protobuf deserialization     25.3     70.0     31.5
+       protobuf-json serialization    365.2    463.7    389.5
+     protobuf-json deserialization    334.1    442.7    360.3
+    
     encoded sizes:
                            jackson   949
                        afterburner   949
                           protobuf   258
-
-
+                     protobuf-json   975
+    
+    
     with 16 children
-             jackson serialization    102.2    111.3    105.8
-           jackson deserialization    210.4    218.6    214.7
-         afterburner serialization    102.2    108.5    105.6
-       afterburner deserialization    210.8    229.2    217.2
-            protobuf serialization     19.5     23.2     20.3
-          protobuf deserialization     37.6     47.6     40.3
-
+             jackson serialization    125.7    136.5    130.8
+           jackson deserialization    259.8    283.3    271.3
+         afterburner serialization    126.9    140.5    134.2
+       afterburner deserialization    256.7    304.2    283.1
+            protobuf serialization     19.6     24.9     21.5
+          protobuf deserialization     50.7     67.3     58.0
+       protobuf-json serialization    719.1    804.9    755.7
+     protobuf-json deserialization    621.2    716.7    657.7
+    
     encoded sizes:
                            jackson   1804
                        afterburner   1804
                           protobuf   497
-
-
+                     protobuf-json   1846
+    
+    
     with 32 children
-             jackson serialization    198.2    211.6    204.0
-           jackson deserialization    403.9    427.1    416.1
-         afterburner serialization    198.4    244.4    212.8
-       afterburner deserialization    407.0    439.5    420.2
-            protobuf serialization     38.0     41.4     39.5
-          protobuf deserialization     73.8     84.0     76.9
-
+             jackson serialization    239.6    262.6    250.3
+           jackson deserialization    488.5    544.8    518.6
+         afterburner serialization    241.3    258.7    249.8
+       afterburner deserialization    494.5    533.9    516.8
+            protobuf serialization     38.4     50.5     42.9
+          protobuf deserialization     97.9    112.5    104.1
+       protobuf-json serialization  1,347.1  1,418.8  1,392.6
+     protobuf-json deserialization  1,185.7  1,303.8  1,232.5
+    
     encoded sizes:
                            jackson   3516
                        afterburner   3516
                           protobuf   977
+                     protobuf-json   3590
 
 Example Objects
 -----

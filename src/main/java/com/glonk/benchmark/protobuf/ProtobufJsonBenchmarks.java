@@ -51,7 +51,6 @@ public class ProtobufJsonBenchmarks implements BenchmarkSet {
         Obj obj = buildObject("parent");
 
         final String jsonString = jsonPrinter.print(obj);
-
         return new Benchmark() {
             @Override
             public String name() {
@@ -65,10 +64,9 @@ public class ProtobufJsonBenchmarks implements BenchmarkSet {
     }
 
     @Override
-    public int encodedSize() {
+    public int encodedSize() throws InvalidProtocolBufferException {
         Obj obj = buildObject("parent");
-        byte[] bytes = obj.toByteArray();
-        return bytes.length;
+        return jsonPrinter.print(obj).length();
     }
 
     private Obj buildObject(String name) {

@@ -15,7 +15,7 @@ project.ext {
   generatedSrcDir = "${buildDir}/generated-sources"
 
   jacksonVersion = '2.5.1'
-  protobufVersion = '3.0.0-alpha-3'
+  protobufVersion = '3.0.2'
 }
 
 sourceSets {
