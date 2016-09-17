@@ -6,11 +6,6 @@ import com.glonk.benchmark.protobuf.model.Obj;
 import com.glonk.benchmark.protobuf.model.Type;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.util.JsonFormat;
-import org.apache.commons.io.IOUtils;
-
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 
 /**
  * Created by alessandro on 17/09/16.
@@ -20,7 +15,7 @@ public class ProtobufJsonBenchmarks implements BenchmarkSet {
 
     private final int numChildren;
     final JsonFormat.Parser jsonParser = JsonFormat.parser();
-    final JsonFormat.Printer jsonPrinter = JsonFormat.printer();
+    final JsonFormat.Printer jsonPrinter = JsonFormat.printer().omittingInsignificantWhitespace();
 
     public ProtobufJsonBenchmarks(int numChildren) {
         this.numChildren = numChildren;

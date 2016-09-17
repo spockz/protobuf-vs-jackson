@@ -49,6 +49,7 @@ Example Run
             protobuf serialization      1.2     15.9      3.8
           protobuf deserialization      2.7     23.4      6.2
        protobuf-json serialization     38.4    228.7     70.7
+          |- omit ws serialization     35.0    224.2     67.2
      protobuf-json deserialization     47.8    224.8     78.2
     
     encoded sizes:
@@ -56,6 +57,7 @@ Example Run
                        afterburner   104
                           protobuf   26
                      protobuf-json   95
+             omit ws protobuf-json   78
     
     
     with 8 children
@@ -66,6 +68,7 @@ Example Run
             protobuf serialization     10.0     91.6     19.6
           protobuf deserialization     25.3     70.0     31.5
        protobuf-json serialization    365.2    463.7    389.5
+          |- omit ws serialization    292.1    414.7    316.2
      protobuf-json deserialization    334.1    442.7    360.3
     
     encoded sizes:
@@ -73,6 +76,7 @@ Example Run
                        afterburner   949
                           protobuf   258
                      protobuf-json   975
+             omit ws protobuf-json   731
     
     
     with 16 children
@@ -83,6 +87,7 @@ Example Run
             protobuf serialization     19.6     24.9     21.5
           protobuf deserialization     50.7     67.3     58.0
        protobuf-json serialization    719.1    804.9    755.7
+          |- omit ws serialization    532.2    572.5    554.4
      protobuf-json deserialization    621.2    716.7    657.7
     
     encoded sizes:
@@ -90,6 +95,7 @@ Example Run
                        afterburner   1804
                           protobuf   497
                      protobuf-json   1846
+             omit ws protobuf-json   1378
     
     
     with 32 children
@@ -100,6 +106,7 @@ Example Run
             protobuf serialization     38.4     50.5     42.9
           protobuf deserialization     97.9    112.5    104.1
        protobuf-json serialization  1,347.1  1,418.8  1,392.6
+          |- omit ws serialization  1,070.9  1,165.9  1,098.7
      protobuf-json deserialization  1,185.7  1,303.8  1,232.5
     
     encoded sizes:
@@ -107,6 +114,7 @@ Example Run
                        afterburner   3516
                           protobuf   977
                      protobuf-json   3590
+             omit ws protobuf-json   2674
 
 Example Objects
 -----
